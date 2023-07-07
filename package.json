@@ -1,14 +1,15 @@
 {
   "name": "git-blame-ignore-revs-linter",
+  "version": "1.0.0",
   "type": "module",
-  "bin": {
-    "check-revs": "bin/check-revs"
-  },
+  "bin": "bin/checks-revs.js",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
+    "pretest": "npm run build",
+    "test": "node --test-reporter spec --experimental-test-coverage --test dist/linter.test.js",
     "format": "prettier . --list-different --write"
   },
   "devDependencies": {
