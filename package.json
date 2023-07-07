@@ -1,4 +1,12 @@
 {
+  "name": "git-blame-ignore-revs-linter",
+  "type": "module",
+  "bin": {
+    "check-revs": "bin/check-revs"
+  },
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier . --list-different --write"
