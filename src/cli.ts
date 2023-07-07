@@ -14,6 +14,8 @@ import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { lint } from './linter.js';
 
+// funky parsing compared to other packages
+// the goal in this project was to have zero non-stdlib dependencies
 const options = {
   path: '.git-blame-ignore-revs',
   silent: false,

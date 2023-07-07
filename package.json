@@ -6,6 +6,9 @@
   "files": [
     "dist/"
   ],
+  "engines": {
+    "node": ">= 16"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc",
     "pretest": "npm run build",
