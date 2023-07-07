@@ -1,6 +1,6 @@
 # `.git-blame-ignore-revs` linter
 
-Look for semantic issues in Git [skip-list formatted files](https://git-scm.com/docs/git-fsck#Documentation/git-fsck.txt-fsckskipList) used by [`--ignore-revs-file`](https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt).
+Check for semantic issues in Git [skip-list formatted files](https://git-scm.com/docs/git-fsck#Documentation/git-fsck.txt-fsckskipList) used by [`--ignore-revs-file`](https://git-scm.com/docs/git-blame#Documentation/git-blame.txt---ignore-revs-fileltfilegt).
 
 ## Usage
 

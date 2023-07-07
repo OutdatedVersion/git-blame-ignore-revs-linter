@@ -1,8 +1,14 @@
 {
   "name": "git-blame-ignore-revs-linter",
   "version": "1.0.0",
+  "description": "Check for semantic issues in `.git-blame-ignore-revs` -- wrong commit, duplicates, etc.",
   "type": "module",
   "bin": "bin/checks-revs.js",
+  "repository": "github:outdatedversion/git-blame-ignore-revs-linter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outdatedversion/git-blame-ignore-revs-linter/issues"
+  },
   "files": [
     "dist/"
   ],
