@@ -1,15 +1,3 @@
-// check-revs /path/to/file
-
-// check-revs
-// line 12: 78c5426be6fd74925932b428883e51bf391c569a was not found
-//    This is a comment with
-//    multiple lines
-// line 12: 6673c981b1cc1a6ddd3bafbed2a4cb08e07883ff was not found
-//    This is a comment above that line
-
-// check-revs --silent
-// [exit 0 or 1]
-
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { lint } from './linter.js';
