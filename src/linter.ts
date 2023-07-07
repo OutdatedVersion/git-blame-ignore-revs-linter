@@ -53,16 +53,11 @@ export const lint = async (
       continue;
     }
 
-    const cmd = execFile('git', ['-C', path, 'cat-file', '-t', trimmed], {
-      encoding: 'utf8',
-    });
-
     let issue;
     try {
-      const stdout = (await cmd).stdout.trim();
-      if (stdout !== 'commit') {
-        issue = `found ${stdout} not commit (${trimmed})`;
-      }
+      await execFile('git', ['-C', path, 'cat-file', '-t', trimmed], {
+        encoding: 'utf8',
+      });
     } catch (error) {
       issue = `not found in repository (${trimmed})`;
     }
