@@ -10,7 +10,8 @@
     "url": "https://github.com/outdatedversion/git-blame-ignore-revs-linter/issues"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "!dist/*.test.js"
   ],
   "engines": {
     "node": ">= 16"
