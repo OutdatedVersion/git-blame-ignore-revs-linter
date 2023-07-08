@@ -51,14 +51,14 @@ And a `.git-blame-ignore-revs` of:
 
 ```shell
 # run formatter
-71d5077ff1b80cb377dcec30d64c31c78c3accfc
+e4ded84c354e6be25aa073bdd3b43e8dc962b1cc
 ```
 
 We'd get:
 
 ```console
 $ npx git-blame-ignore-revs
-line 2: not found in repository (e25f0d75fabe5d00ce73f8df96179b8d6c8ed082)
+line 2: not found in repository (e4ded84c354e6be25aa073bdd3b43e8dc962b1cc)
     run formatter
 ```
 
@@ -92,7 +92,7 @@ We'd get:
 
 ```console
 $ npx git-blame-ignore-revs
-line 6: duplicate entry (2f52ead931375cabfe50fd682f0075342f710e45)
+line 6: duplicate entry (71d5077ff1b80cb377dcec30d64c31c78c3accfc)
 ```
 
 ### Malformed commit
@@ -111,17 +111,17 @@ Date:   Thu Jul 6 21:38:54 2023 -0500
 And a `.git-blame-ignore-revs` of:
 
 ```shell
-# run formatter
-71d5077ff1b80cb377dcec30d64c31c78c3accfc
-# run formatter again
-9b183f9ce24a93cfe1d6b16a3ef0902d9672c121
-# something else!
-71d5077ff1b80cb377dcec30d64c31c78c3accfc
+6c29e5b0d2f83e03ce2320cd7ea445465e4bfc9f
+# no go
+main
+# also a no go
+v1.0
 ```
 
 We'd get:
 
 ```console
 $ npx git-blame-ignore-revs
-line 6: duplicate entry (2f52ead931375cabfe50fd682f0075342f710e45)
+line 3: not a valid commit (main)
+line 5: not a valid commit (v1.0)
 ```
