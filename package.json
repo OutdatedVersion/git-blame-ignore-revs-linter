@@ -1,6 +1,6 @@
 {
   "name": "git-blame-ignore-revs-linter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Check for semantic issues in `.git-blame-ignore-revs` -- wrong commit, duplicates, etc.",
   "type": "module",
   "bin": "bin/checks-revs.js",
