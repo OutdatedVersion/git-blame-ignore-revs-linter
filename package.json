@@ -6,6 +6,7 @@
   "bin": "bin/checks-revs.js",
   "repository": "github:outdatedversion/git-blame-ignore-revs-linter",
   "license": "MIT",
+  "types": "dist/linter.d.ts",
   "bugs": {
     "url": "https://github.com/outdatedversion/git-blame-ignore-revs-linter/issues"
   },
@@ -13,6 +14,7 @@
     "dist/",
     "!dist/*.test.js"
   ],
+  "exports": "./dist/linter.js",
   "engines": {
     "node": ">= 16"
   },

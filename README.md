@@ -24,6 +24,23 @@ Check for semantic and opinionated issues in Git [skip-list formatted files](htt
   }
   ```
 
+- Through code
+
+  ```console
+  npm install git-blame-ignore-revs-linter
+  ```
+
+  ```js
+  import fs from 'fs/promises';
+  import { lint } from 'git-blame-ignore-revs-linter';
+  await lint(
+    dir,
+    (await fs.readFile('.git-blame-ignore-revs', 'utf8')).split('\n')
+  );
+  ```
+
+  See [src/cli.ts](src/cli.ts) for another code example
+
 ## Checks
 
 - [Commit not in repository](#commit-not-in-repository)

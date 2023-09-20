@@ -4,9 +4,39 @@ import { promisify } from 'node:util';
 const execFile = promisify(execFileOriginal);
 
 export interface LinterOptions {
+  /**
+   * Relevant comments will be appended to errors if true.
+   *
+   * @default false
+   * @example
+   * const lines = [
+   *   '# ignores some stuff',
+   *   '',
+   *   '# ran formatting',
+   *   'main'
+   * ];
+   * await lint(dir, lines, { includeComments: true });
+   * // line 4: not a valid commit (main)
+   * //     ran formatting
+   * @example
+   * const lines = [
+   *   '# ignores some stuff',
+   *   '',
+   *   '# ran formatting',
+   *   'main'
+   * ];
+   * await lint(dir, lines);
+   * await lint(dir, lines, { includeComments: false });
+   * // line 4: not a valid commit (main)
+   */
   includeComments?: boolean;
 }
 
+/**
+ * @param path Relative/absolute path to project root. If your `.git` is at `/tmp/project/.git` this should be `/tmp/project`, for example.
+ * @param lines Lines of `.git-blame-ignore-revs` (split on `\n`)
+ * @param opts
+ */
 export const lint = async (
   path: string,
   lines: string[],
