@@ -12,7 +12,9 @@
   },
   "files": [
     "dist/",
-    "!dist/*.test.js"
+    "dist/linter.d.ts",
+    "!dist/*.test.js",
+    "!dist/*.d.ts"
   ],
   "exports": "./dist/linter.js",
   "engines": {
