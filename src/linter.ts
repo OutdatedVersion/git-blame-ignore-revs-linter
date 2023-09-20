@@ -39,7 +39,7 @@ export const lint = async (
       // ```
       comments = [];
       continue;
-    } else if (!/^[0-9a-z]{40}$/i.test(trimmed)) {
+    } else if (!/^[0-9a-f]{40}$/i.test(trimmed)) {
       // Likely not a valid commit reference.
       // I was surprised to see abbreviated references aren't supported either. But this
       // probably reduces false matches as the repository history grows.
